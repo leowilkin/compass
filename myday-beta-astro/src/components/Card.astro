@@ -1,0 +1,13 @@
+---
+const { link, title, svg,  } = Astro.props;
+---
+<a href="{link}">
+    <div class="rounded-lg border text-card-foreground shadow-sm w-full bg-[#ffe680]" data-v0-t="card">
+        <div class="p-6 flex items-center justify-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d={svg} />
+          </svg>
+          <span class="text-lg font-bold text-black">{title}</span>
+        </div>
+    </div>
+    </a>
