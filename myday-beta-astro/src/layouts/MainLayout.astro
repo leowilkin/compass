@@ -1,0 +1,26 @@
+---
+import Card from '../components/Card.astro';
+import Sidebar from '../components/Sidebar.astro';
+const { pagetitle, version } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pagetitle} | myDay {version}</title>
+	</head>
+	<body>
+    <div class="flex h-screen bg-[#ffcc00]">
+      <Sidebar />
+        <div class="w-3/4 p-8 space-y-4">
+            <slot>
+                <p>Whoops! Looks like there's no content here...</p>
+            </slot>
+          </div>
+        </div>
+      </div>
+	</body>
+</html>
