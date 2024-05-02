@@ -1,0 +1,13 @@
+---
+import Card from '../components/Card.astro';
+import AcademicsTab from '../components/Tabs/AcademicsTab.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout pagetitle="Academics" version="v0.1">
+          <AcademicsTab />
+          <div class="grid grid-cols-3 gap-4">
+            <Card title="Tassomai" link="https://app.tassomai.com/dashboard" svg="M7.5 22q-1.45 0-2.475-1.025T4 18.5v-13q0-1.45 1.025-2.475T7.5 2H20v15q-.625 0-1.062.438T18.5 18.5t.438 1.063T20 20v2zM6 15.325q.35-.175.725-.25T7.5 15H8V4h-.5q-.625 0-1.062.438T6 5.5zM10 15h8V4h-8zm-4 .325V4zM7.5 20h9.325q-.15-.35-.237-.712T16.5 18.5q0-.4.075-.775t.25-.725H7.5q-.65 0-1.075.438T6 18.5q0 .65.425 1.075T7.5 20" />
+            <Card title="Educake" link="https://my.educake.co.uk/student-login" svg="M4 22q-.425 0-.712-.288T3 21v-5q0-.825.588-1.412T5 14v-4q0-.825.588-1.412T7 8h4V6.55q-.45-.3-.725-.725T10 4.8q0-.375.15-.738t.45-.662L12 2l1.4 1.4q.3.3.45.662T14 4.8q0 .6-.275 1.025T13 6.55V8h4q.825 0 1.413.587T19 10v4q.825 0 1.413.588T21 16v5q0 .425-.288.713T20 22zm3-8h10v-4H7zm-2 6h14v-4H5zm2-6h10zm-2 6h14zm14-6H5z" />
+          </div>
+</MainLayout>
