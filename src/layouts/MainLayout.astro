@@ -1,16 +1,21 @@
 ---
-import Card from '../components/Card.astro';
 import Sidebar from '../components/Sidebar.astro';
-const { pagetitle, version } = Astro.props;
+const { pagetitle, version, metatitle, metadescription } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/assets/crest.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pagetitle} | myDay {version}</title>
+    <ViewTransitions />
+
+    <!-- Meta Tags -->
+    <meta name="title" content={pagetitle}/>
+    <meta name="description" content="Wellington College, Berkshire myDay BETA" />
 	</head>
 	<body>
     <div class="flex h-screen bg-[#ffcc00]">
