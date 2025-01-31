@@ -1,0 +1,24 @@
+---
+title: Adding Cards
+description: How to add cards to your myDay instance
+---
+
+import { Steps, Code } from '@astrojs/starlight/components';
+
+Cards are the links you see on the homepage, and other subject specific pages on myDay.
+
+To create a Card follow these steps:
+
+<Steps>
+
+1. Go to the page that you want to add the Card to. e.g. `src/pages/academic.astro`
+
+2. Copy and paste this template structure below the last card:
+
+    <Code code='<Card title=" " link=" " svg=" " />' lang="astro" title='src/pages/academic.astro' />
+
+3. Fill in the details about Title and Link
+
+4. See [SVG Docs](guides/svg) for information about how to add an icon.
+
+</Steps>
