@@ -4,15 +4,15 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://myday.wilkin.xyz',
+	site: 'https://compass.wilkin.xyz',
 	integrations: [
 		starlight({
-			title: 'myDay Docs',
+			title: 'Compass Docs',
 			social: {
-				github: 'https://github.com/leowilkin/myday',
+				github: 'https://github.com/leowilkin/compass',
 			},
 			editLink: {
-				baseUrl: 'https://github.com/leowilkin/myday/edit/main/docs/',
+				baseUrl: 'https://github.com/leowilkin/compass/edit/main/docs/',
 			  },
 			sidebar: [
 				{

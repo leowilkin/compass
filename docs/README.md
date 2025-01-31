@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>myDay Docs</h1>
-  <p>Documentation for myDay</p>
+  <h1>Compass Docs</h1>
+  <p>Documentation for Compass</p>
 </div>
 
 
@@ -16,4 +16,4 @@ npm run dev
 
 Licensed under the MIT License, Copyright © Leo Wilkin.
 
-See [LICENSE](https://github.com/leowilkin/myday/blob/main/LICENSE) for more information.
+See [LICENSE](https://github.com/leowilkin/compass/blob/main/LICENSE) for more information.
