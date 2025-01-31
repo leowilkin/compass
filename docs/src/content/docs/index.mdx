@@ -2,6 +2,8 @@
 title: myDay Documentation
 description: Get started building your docs site with Starlight.
 siteTitle: myDay Docs
+tableOfContents: false
+template: splash
 banner:
   content: |
     Looking for the demo?
@@ -10,20 +12,9 @@ banner:
 
 import { Card, CardGrid, LinkCard, Aside } from '@astrojs/starlight/components';
 
-## Guides
-
 <CardGrid>
-	<LinkCard title="Add a Card" href='guides/adding-cards' />
-	<LinkCard title="Add a New Tab" href='guides/new-tab' />
-	<LinkCard title="SVG Docs" href='guides/svg' />
-</CardGrid>
-
-## Reference
-
-<CardGrid>
-	<LinkCard title="Add a Card" href='guides/adding-cards' />
-	<LinkCard title="Add a New Tab" href='guides/new-tab' />
-	<LinkCard title="SVG Docs" href='guides/svg' />
+	<LinkCard title="Reference" href='reference' />
+	<LinkCard title="Guides" href='guides/' />
 </CardGrid>
 
 <Aside type="tip">This documentation is constantly being iterated upon! See something you can fix? [Do it!](https://github.com/leowilkin/myday/)</Aside>
