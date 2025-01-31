@@ -1,0 +1,116 @@
+---
+title: Quick Start
+desc: Get myDay up and running quickly with this short guide.
+sidebar:
+  order: 2
+---
+
+import { Steps, Code, Aside, Badge, FileTree } from '@astrojs/starlight/components';
+
+In this guide, we'll run you through how to:
+
+- Download, and install your own myDay instance
+- Customise to match your institution's branding
+- <Badge text="Closed Beta" variant="caution" /> _Configure your OAuth_
+- Add your first [tab](/guides/new-tab), and [card](/guides/adding-cards)!
+
+## Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- [Git](https://git-scm.com/)
+
+## Installing
+
+<Steps>
+
+1. Clone the Repository
+
+    ```sh
+    git clone https://github.com/leowilkin/myday.git
+    cd myday
+    ```
+
+2. Install Dependencies
+
+    ```sh
+    npm install
+    ```
+
+3. Start the Development Server
+
+    ```sh
+    npm run dev
+    ```
+</Steps>
+
+The app should now be running locally. Open your browser and navigate to http://localhost:4321/ (or your default Astro port) to see it in action.
+
+## Customising
+
+### Add your first tab
+
+By default, myDay comes bundled with three blank tabs. However, should you wish to start from scratch, here is a guide explaining how to add a custom tab.
+
+A tab is a collection of cards, like Sport, Safeguarding etc
+
+<Steps>
+
+1. Create a new Component in `src/components/Tabs/` in the format `{Tab Name}Tab.astro` by copying the contents of `TemplateTab.astro`
+
+    <FileTree>
+
+    - astro.config.mjs
+    - package.json
+    - src
+    - components
+        - Tabs
+            - TemplateTab.astro
+            - **`{TabName}Tab.astro`**
+            - ...
+    - pages/
+
+    </FileTree>
+
+2. Replace `{title}` with your title. Do not include the curly braces.
+
+3. Replace `{link}` with the link to the app. Do not include the curly braces.
+
+4. Replace `{svg}` with the SVG path. See `SVG Docs` for more info.
+
+5. Add your tab to the Navbar by going to `src/components/Nav.astro`, and importing the Tab like this:
+
+    <Code code="import {Tab Name} from './Tabs/{Tab Name}Tab.astro'" lang="astro" title='src/components/Nav.astro' />
+
+    and by adding the Tab in the body like this:
+
+    <Code code='<{Tab Name} />' lang="astro" title='src/components/Nav.astro' />
+
+
+6. Make the page by duplicating the template page named `template.txt`, and renaming it to the link name. Make sure to change the extension of the file to `.astro`
+
+7. Change the variables in the file in curly brackets. Do not include the curly brackets.
+
+8. See the next doc page for info on how to add cards to your page.
+
+</Steps>
+
+
+### Add your first card
+
+Next, you'll want to add cards to your page. By default, the template tab comes with a few blank cards, but should you want to learn how to create your own, here is a short guide explaining.
+
+<Steps>
+
+1. Go to the page that you want to add the Card to. e.g. `src/pages/academic.astro`
+
+2. Copy and paste this template structure below the last card:
+
+    <Code code='<Card title=" " link=" " svg=" " />' lang="astro" title='src/pages/academic.astro' />
+
+3. Fill in the details about Title and Link
+
+4. See [SVG Docs](/guides/svg) for information about how to add an icon.
+
+</Steps>
