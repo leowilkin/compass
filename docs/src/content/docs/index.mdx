@@ -1,6 +1,6 @@
 ---
 title: myDay Documentation
-description: Get started building your docs site with Starlight.
+description: Provide a open-source, intutive dashboard for your school or institution.
 siteTitle: myDay Docs
 tableOfContents: false
 template: splash
@@ -8,11 +8,20 @@ banner:
   content: |
     Looking for the demo?
     <a href="https://demo.myday.wilkin.xyz">Find it here.</a>
+hero:
+  title: Make your homepage beautiful
+  tagline: Everything you need to create a beautiful dashboard for your school. Fast, accessible, and easy-to-use.
+  actions:
+    - text: Get started
+      icon: right-arrow
+      link: /guides/quickstart
+    - text: View a demo
+      icon: external
+      variant: minimal
+      link: https://demo.myday.wilkin.xyz
 ---
 
-import { Card, CardGrid, LinkCard, Aside } from '@astrojs/starlight/components';
-
-<LinkCard title='Quick Start' href='guides/quickstart' />
+import { Card, CardGrid, LinkCard, Aside, LinkButton } from '@astrojs/starlight/components';
 
 <CardGrid>
 	<LinkCard title="Reference" href='reference' />
