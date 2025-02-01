@@ -1,0 +1,124 @@
+---
+title: Add a calendar
+---
+
+import { Steps, Code, Tabs, TabItem, Aside, FileTree } from '@astrojs/starlight/components';
+
+You can add calendars fetched from iCals, or webcals dynamically on your dashboard.
+
+## Instructions
+
+<Aside style="caution">
+    You need to use different embeds for mobile, and desktop/tablet sizes.
+</Aside>
+
+
+<Tabs>
+  <TabItem label="Desktop/Tablet">
+    We're using this webcal link as the example: `webcal://www.wellingtoncollegecalendar.org.uk/CalendarSync.ashx?Cal=Wellington%20College%20Calendar&ID=46`
+
+    <Steps>
+
+    1. Go to [this link](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json), and configure your settings as needed. When configuring, ignore starting date.
+    
+    2. Copy the large blue link containing your preferences which you can find at the top of the page.
+
+    3. Go to the Calendar component:
+        <FileTree>
+        - app
+            - src
+                - components
+                    - **Calendar.astro**
+                - config
+                - layouts
+                - pages
+            - public
+        - docs
+        </FileTree>
+    
+    4. Paste the copied link into the source tag for the `Desktop view`.
+
+        It should look something like this now:
+
+        <Code
+        code={`<div class="desktop-view w-full">
+            <iframe class="open-web-calendar w-full"
+            style="background:url('/assets/loader.gif') center center no-repeat; border-radius: 10px;"
+            src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?YOUR_LINK"
+            sandbox="allow-scripts allow-same-origin allow-top-navigation"
+            allowtransparency="true" scrolling="no"
+            frameborder="0" height="600px">
+            </iframe>
+        </div>`}
+        lang="astro"
+        title="app/src/components/Calendar.astro"
+        mark="YOUR_LINK"
+        />
+    5. Find the `&date=` segment of the URL.
+
+    6. Replace the value with this:
+
+        <Code code={`\${new Date().toISOString().split('T')[0]}`} lang="js" />
+    
+    7. Enclose the `src` string in backticks (`) instead of quotation marks ".
+
+    8. View the result in your browser!
+
+    </Steps>
+  
+  </TabItem>
+
+  <TabItem label="Mobile">
+  
+      <Steps>
+
+    1. Go to [this link](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json), and configure your settings as needed. When configuring, ignore starting date.
+    
+    2. Copy the large blue link containing your preferences which you can find at the top of the page.
+
+    3. Go to the Calendar component:
+        <FileTree>
+        - app
+            - src
+                - components
+                    - **Calendar.astro**
+                - config
+                - layouts
+                - pages
+            - public
+        - docs
+        </FileTree>
+    
+    4. Paste the copied link into the source tag for the `Desktop view`.
+
+        It should look something like this now:
+
+        <Code
+        code={`<div class="desktop-view w-full">
+            <iframe class="open-web-calendar w-full"
+            style="background:url('/assets/loader.gif') center center no-repeat; border-radius: 10px;"
+            src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?YOUR_LINK"
+            sandbox="allow-scripts allow-same-origin allow-top-navigation"
+            allowtransparency="true" scrolling="no"
+            frameborder="0" height="600px">
+            </iframe>
+        </div>`}
+        lang="astro"
+        title="app/src/components/Calendar.astro"
+        mark="YOUR_LINK"
+        />
+    5. Find the `&date=` segment of the URL.
+
+    6. Replace the value with this:
+
+        <Code code={`\${new Date().toISOString().split('T')[0]}`} lang="js" />
+    
+    7. Enclose the `src` string in backticks (`) instead of quotation marks ".
+
+    8. View the result in your browser!
+
+    </Steps>
+
+  </TabItem>
+</Tabs>
+

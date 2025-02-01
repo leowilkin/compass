@@ -1,0 +1,48 @@
+---
+const { link, title, svg } = Astro.props;
+import { siteConfig } from '../config/site';
+---
+<a href={link}>
+    <div class="rounded-lg border text-card-foreground shadow-sm w-full bg-[#FFE680]">
+        <div class="p-6 flex items-center justify-center space-x-2">
+            <!-- Mobile view -->
+            <div class="mobile-view w-full">
+                <iframe class="open-web-calendar w-full"
+                    style="background:url('/assets/loader.gif') center center no-repeat; border-radius: 10px;"
+                    src=`https://open-web-calendar.hosted.quelltext.eu/calendar.html?controls=today&css=.dhx_cal_navline%20%7B%20display%3A%20none%20!important%3B%20height%3A%200%20!important%3B%20%7D%0A.dhx_cal_header%20%7B%20top%3A%200px%20!important%3B%20%7D%0A.dhx_cal_data%20%7B%20top%3A%2035px%20!important%3B%20%7D%0A.CALENDAR-INDEX-0%2C%20.CALENDAR-INDEX-0%20.dhx_body%2C%20.CALENDAR-INDEX-0%20.dhx_title%20%20%7B%20background-color%3A%20%23ffa200%3B%20%7D%20%0A&date=${new Date().toISOString().split('T')[0]}&hour_division=2&hour_format=%25g%3A%25i%E2%80%AF%25a&prefer_browser_language=true&skin=flat&specification_url=https%3A%2F%2Fopen-web-calendar.quelltext.eu%2Fassets%2Ftemplates%2Fchristmas-day.json&starting_hour=9&tab=day&tabs=&timezone=Europe%2FLondon&title=School%20Calendar&url=webcal%3A%2F%2Fwww.wellingtoncollegecalendar.org.uk%2FCalendarSync.ashx%3FCal%3DWellington%2520College%2520Calendar%26ID%3D46`
+                    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+                    allowTransparency="true" scrolling="no"
+                    frameborder="0" height="600px">
+                </iframe>
+            </div>
+            <!-- Desktop view -->
+            <div class="desktop-view w-full">
+                <iframe class="open-web-calendar w-full"
+                    style="background:url('/assets/loader.gif') center center no-repeat; border-radius: 10px;"
+                    src=`https://open-web-calendar.hosted.quelltext.eu/calendar.html?css=.CALENDAR-INDEX-0%2C%20.CALENDAR-INDEX-0%20.dhx_body%2C%20.CALENDAR-INDEX-0%20.dhx_title%20%7B%20background-color%3A%20%2377767b%3B%20%7D%20.CALENDAR-INDEX-1%2C%20.CALENDAR-INDEX-1%20.dhx_body%2C%20.CALENDAR-INDEX-1%20.dhx_title%20%20%7B%20background-color%3A%20%23f9f06b%3B%20%7D%20.CALENDAR-INDEX-2%2C%20.CALENDAR-INDEX-2%20.dhx_body%2C%20.CALENDAR-INDEX-2%20.dhx_title%20%20%7B%20background-color%3A%20%23dc8add%3B%20%7D%0A.CALENDAR-INDEX-0%2C%20.CALENDAR-INDEX-0%20.dhx_body%2C%20.CALENDAR-INDEX-0%20.dhx_title%20%20%7B%20background-color%3A%20%23ffa200%3B%20%7D%20%0A.CALENDAR-INDEX-1%2C%20.CALENDAR-INDEX-1%20.dhx_body%2C%20.CALENDAR-INDEX-1%20.dhx_title%20%20%7B%20background-color%3A%20%2300cfeb%3B%20%7D%20%0A&date=${new Date().toISOString().split('T')[0]}&ending_hour=18&hour_format=%25g%3A%25i%E2%80%AF%25a&prefer_browser_language=true&skin=flat&specification_url=https%3A%2F%2Fopen-web-calendar.quelltext.eu%2Fassets%2Ftemplates%2Frooms.json&start_of_week=su&starting_hour=8&tab=week&timezone=Europe%2FLondon&title=Office%20Rooms&url=webcal%3A%2F%2Fwww.wellingtoncollegecalendar.org.uk%2FCalendarSync.ashx%3FCal%3DWellington%2520College%2520Calendar%26ID%3D46%26FT%3DOR%26C1%3D470%26C1%3D590%26AS%3D1%26ST%3D0%26SC%3D1%26SO%3D1&url=webcal%3A%2F%2Fwww.wellingtoncollegecalendar.org.uk%2FCalendarSync.ashx%3FCal%3DWellington%2520College%2520Calendar%26ID%3D46%26FT%3DOR%26AC%3D1%26ST%3D0`
+                    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+                    allowtransparency="true" scrolling="no"
+                    frameborder="0" height="600px">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+  .mobile-view {
+    display: none;
+  }
+  .desktop-view {
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-view {
+      display: block;
+    }
+    .desktop-view {
+      display: none;
+    }
+  }
+</style>
