@@ -3,12 +3,12 @@ const { link, title, svg } = Astro.props;
 import { siteConfig } from '../config/site';
 ---
 <a href={link}>
-    <div class=`rounded-lg border text-card-foreground shadow-sm w-full bg-[${siteConfig.theme.card.background}]`>
+    <div class=`rounded-lg border text-card-foreground shadow-sm w-full bg-[#FFE680]`>
         <div class="p-6 flex items-center justify-center space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" d={svg} />
             </svg>
-            <span class=`text-lg font-bold text-${siteConfig.theme.card.text}`>{title}</span>
+            <span class=`text-lg font-bold text-black`>{title}</span>
         </div>
     </div>
 </a>

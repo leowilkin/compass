@@ -20,7 +20,7 @@ export const siteConfig = {
             primary: "#F49812",    // Main brand color (e.g., for buttons)
             secondary: "#4FAED9",  // Secondary color
             sidebar: "#B8DFD9",    // Sidebar background
-            background: "#ffcc00", // Main background color
+            background: "#FFCC00", // Main background color
         }
     },
 
