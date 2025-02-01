@@ -89,17 +89,17 @@ You can add calendars fetched from iCals, or webcals dynamically on your dashboa
         - docs
         </FileTree>
     
-    4. Paste the copied link into the source tag for the `Desktop view`.
+    4. Paste the copied link into the source tag for the `Mobile view`.
 
         It should look something like this now:
 
         <Code
-        code={`<div class="desktop-view w-full">
+        code={`<div class="mobile-view w-full">
             <iframe class="open-web-calendar w-full"
             style="background:url('/assets/loader.gif') center center no-repeat; border-radius: 10px;"
-            src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?YOUR_LINK"
+            src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?controls=today&css=.dhx_cal_navline%20%7B%20display%3A%20none%20!important%3B%20height%3A%200%20!important%3B%20%7D%0A.dhx_cal_header%20%7B%20top%3A%200px%20!important%3B%20%7D%0A.dhx_cal_data%20%7B%20top%3A%2035px%20!important%3B%20%7D%0A.CALENDAR-INDEX-0%2C%20.CALENDAR-INDEX-0%20.dhx_body%2C%20.CALENDAR-INDEX-0%20.dhx_title%20%20%7B%20background-color%3A%20%23ffa200%3B%20%7D%20%0A&date=\${new Date().toISOString().split('T')[0]}&hour_division=2&hour_format=%25g%3A%25i%E2%80%AF%25a&prefer_browser_language=true&skin=flat&specification_url=https%3A%2F%2Fopen-web-calendar.quelltext.eu%2Fassets%2Ftemplates%2Fchristmas-day.json&starting_hour=9&tab=day&tabs=&timezone=Europe%2FLondon&title=School%20Calendar&url=webcal%3A%2F%2Fwww.wellingtoncollegecalendar.org.uk%2FCalendarSync.ashx%3FCal%3DWellington%2520College%2520Calendar%26ID%3D46"
             sandbox="allow-scripts allow-same-origin allow-top-navigation"
-            allowtransparency="true" scrolling="no"
+            allowTransparency="true" scrolling="no"
             frameborder="0" height="600px">
             </iframe>
         </div>`}
@@ -107,6 +107,7 @@ You can add calendars fetched from iCals, or webcals dynamically on your dashboa
         title="app/src/components/Calendar.astro"
         mark="YOUR_LINK"
         />
+        
     5. Find the `&date=` segment of the URL.
 
     6. Replace the value with this:
