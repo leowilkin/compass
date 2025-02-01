@@ -1,12 +1,12 @@
 ---
 import Card from '../components/Card.astro';
-import AcademicsTab from '../components/Tabs/AcademicsTab.astro';
+import Tab from '../components/Tab.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout pagetitle="Academics" version="v0.1">
-          <AcademicsTab />
-          <div class="grid grid-cols-3 gap-4">
+<MainLayout pagetitle="Academics">
+          <Tab title="Academic" link="/academic" svg="M6 16.363q.33-.29.735-.442q.403-.152.88-.152h.77V4H8q-.817 0-1.409.591Q6 5.183 6 6zm3.385-.594H18V4.616q0-.27-.173-.443T17.385 4h-8zM6 16.363V4.385zM7.616 21q-1.085 0-1.85-.766Q5 19.47 5 18.385V6q0-1.258.871-2.129T8 3h9.385q.67 0 1.143.472q.472.472.472 1.144V16.37q0 .162-.114.286q-.115.124-.309.19q-.523.136-.858.557t-.334.98q0 .541.325.965t.848.574q.215.073.329.21t.113.304v.057q0 .214-.143.36T18.5 21zm0-1h9.363q-.285-.33-.44-.732q-.155-.4-.155-.884q0-.457.152-.87t.443-.745H7.616q-.689 0-1.152.476T6 18.385q0 .688.464 1.151T7.616 20" />
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
             <Card title="Tassomai" link="https://app.tassomai.com/dashboard" svg="M7.5 22q-1.45 0-2.475-1.025T4 18.5v-13q0-1.45 1.025-2.475T7.5 2H20v15q-.625 0-1.062.438T18.5 18.5t.438 1.063T20 20v2zM6 15.325q.35-.175.725-.25T7.5 15H8V4h-.5q-.625 0-1.062.438T6 5.5zM10 15h8V4h-8zm-4 .325V4zM7.5 20h9.325q-.15-.35-.237-.712T16.5 18.5q0-.4.075-.775t.25-.725H7.5q-.65 0-1.075.438T6 18.5q0 .65.425 1.075T7.5 20" />
             <Card title="Educake" link="https://my.educake.co.uk/student-login" svg="M4 22q-.425 0-.712-.288T3 21v-5q0-.825.588-1.412T5 14v-4q0-.825.588-1.412T7 8h4V6.55q-.45-.3-.725-.725T10 4.8q0-.375.15-.738t.45-.662L12 2l1.4 1.4q.3.3.45.662T14 4.8q0 .6-.275 1.025T13 6.55V8h4q.825 0 1.413.587T19 10v4q.825 0 1.413.588T21 16v5q0 .425-.288.713T20 22zm3-8h10v-4H7zm-2 6h14v-4H5zm2-6h10zm-2 6h14zm14-6H5z" />
             <Card title="UCAS" link="https://ucas.com" svg="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9zm6.82 6L12 12.72L5.18 9L12 5.28zM17 16l-5 2.72L7 16v-3.73L12 15l5-2.73z" />

@@ -11,41 +11,14 @@ A tab is a collection of cards, like Sport or Safeguarding.
 
 <Steps>
 
-1. Create a new Component in `src/components/Tabs/` in the format `{Tab Name}Tab.astro` by copying the contents of `TemplateTab.astro`
+1. Add your tab to the Navbar by going to `src/components/Nav.astro`, and importing the Tab like this:
 
-    <FileTree>
+    <Code code='<Tab title={name} link="{/slug}" svg="{svg} />' lang="astro" title='src/components/Nav.astro' />
 
-    - astro.config.mjs
-    - package.json
-    - src
-    - components
-        - Tabs
-            - TemplateTab.astro
-            - **`{TabName}Tab.astro`**
-            - ...
-    - pages/
+2. Make the page by duplicating the template page named `_template.astro`, and renaming it to the link name, e.g `sport.astro`. Make sure to change the extension of the file to `.astro`
 
-    </FileTree>
+3. Change the variables in the file in curly brackets. Do not include the curly brackets.
 
-2. Replace `{title}` with your title. Do not include the curly braces.
-
-3. Replace `{link}` with the link to the app. Do not include the curly braces.
-
-4. Replace `{svg}` with the SVG path. See `SVG Docs` for more info.
-
-5. Add your tab to the Navbar by going to `src/components/Nav.astro`, and importing the Tab like this:
-
-    <Code code="import {Tab Name} from './Tabs/{Tab Name}Tab.astro'" lang="astro" title='src/components/Nav.astro' />
-
-    and by adding the Tab in the body like this:
-
-    <Code code='<{Tab Name} />' lang="astro" title='src/components/Nav.astro' />
-
-
-6. Make the page by duplicating the template page named `template.txt`, and renaming it to the link name. Make sure to change the extension of the file to `.astro`
-
-7. Change the variables in the file in curly brackets. Do not include the curly brackets.
-
-8. See the next doc page for info on how to add cards to your page.
+4. See the next doc page for info on how to add cards to your page.
 
 </Steps>

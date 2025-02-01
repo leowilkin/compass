@@ -1,30 +1,31 @@
 ---
 import Sidebar from '../components/Sidebar.astro';
-const { pagetitle, version, metatitle, metadescription } = Astro.props;
+const { pagetitle } = Astro.props;
 import { ViewTransitions } from 'astro:transitions';
+import MobileMenuToggle from '../components/utils/MobileMenuToggle.astro';
+import { siteConfig } from '../config/site';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="https://placehold.co/400" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pagetitle} | Compass</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href={siteConfig.school.favicon.src} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pagetitle} | Compass</title>
     <ViewTransitions />
-
     <meta name="title" content={pagetitle} />
     <meta name="description" content="Compass - access your school resources" />
-	</head>
-	<body>
-    <div class="flex h-screen bg-[#ffcc00]">
+  </head>
+  <body>
+    <div class=`flex min-h-screen bg-[${siteConfig.theme.colors.background}]`>
       <Sidebar />
-        <div class="w-3/4 p-8 space-y-4">
-            <slot>
-                <p>Whoops! Looks like there's no content here...</p>
-            </slot>
-          </div>
-        </div>
+      <MobileMenuToggle />
+      <div class="flex-1 p-4 lg:p-8 space-y-4">
+        <slot>
+          <p>Whoops! Looks like there's no content here...</p>
+        </slot>
       </div>
-	</body>
+    </div>#
+  </body>
 </html>
