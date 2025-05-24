@@ -1,7 +1,7 @@
 # Compass
 An **open-source**, free (as in free beer) one stop shop for your school's default homepages allowing administrators to link useful sites, and important information in a modular, easy to use framework. Looking for an opensource alternative to paid SaaS projects like myDay? Compass is for you!
 
-![image](https://github.com/user-attachments/assets/2ba3241c-14c7-4736-8381-a4d6a7d3e1a8)
+![image](https://github.com/user-attachments/assets/5cf437ba-76e5-45aa-a78e-e8b3148e25af)
 
 View the documentation [here](https://compass.wilkin.xyz).
 
